@@ -2,7 +2,7 @@
   "expo": {
     "name": "betamb",
     "slug": "betamb",
-    "version": "0.1.0",
+    "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
@@ -15,8 +15,7 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true,
-      "bundleIdentifier": "beta.betamb.com"
+      "supportsTablet": true
     },
     "android": {
       "adaptiveIcon": {
@@ -26,12 +25,6 @@
     },
     "web": {
       "favicon": "./assets/favicon.png"
-    },
-    "extra": {
-      "eas": {
-        "projectId": "11d722a0-ef0f-4b38-891b-f2a6b4817a14"
-      }
-    },
-    "owner": "jahsdjksdah"
+    }
   }
 }
