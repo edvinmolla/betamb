@@ -171,10 +171,7 @@ const HomeScreen = () => {
                         <View className="flex-row pt-2 mx-3 items-center bg-white mb-3">
 
 
-                            <View className="flex-1">
-                                <Image source={{ uri: "https://github.com/edvinmolla/dotfiles/blob/master/Your%20paragraph%20text%20(1)%20(1).png?raw=true" }}
-                                    style={{ flex: 1, height: undefined, width: 110, resizeMode: 'contain' }} />
-                            </View>
+
 
                             {purchaseStatus === "true" ? (
                                 // <TouchableOpacity
@@ -188,7 +185,7 @@ const HomeScreen = () => {
                                 // </TouchableOpacity>
 
                                 <View className="h-4">
-                                    </View>
+                                </View>
 
                             ) : (
 

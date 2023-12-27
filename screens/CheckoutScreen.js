@@ -19,7 +19,7 @@ const CheckoutScreen = () => {
     const { width, height } = Dimensions.get('window');
     const isSmallScreen = width < 380;
 
-    const totalPrice = (parseFloat(price) + 0.50 + 0.35).toFixed(2);
+    const totalPrice = (parseFloat(price) + 0.50 + 2.15).toFixed(2);
 
     const [isApplePaySupported, setIsApplePaySupported] = useState(false);
 
@@ -45,7 +45,7 @@ const CheckoutScreen = () => {
                         },
                         {
                             label: "Delivery",
-                            amount: "0.35",
+                            amount: "2.15",
                             paymentType: PlatformPay.PaymentType.Immediate,
                         },
                         {
@@ -62,7 +62,7 @@ const CheckoutScreen = () => {
 
                         {
                             label: 'Total',
-                            amount: withFoodSide ? (parseFloat(price) + 1.75 + 0.50 + 0.35).toFixed(2) : (parseFloat(price) + 0.50 + 0.35).toFixed(2),
+                            amount: withFoodSide ? (parseFloat(price) + 1.75 + 0.50 + 2.15).toFixed(2) : (parseFloat(price) + 0.50 + 2.15).toFixed(2),
                             paymentType: PlatformPay.PaymentType.Immediate,
                         },
                     ],
@@ -97,8 +97,8 @@ const CheckoutScreen = () => {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({
-               status: "ok",
-               value: withFoodSide ? (parseFloat(price) + 1.75 + 0.50 + 0.35).toFixed(2) : (parseFloat(price) + 0.50 + 0.35).toFixed(2),
+                status: "ok",
+                value: withFoodSide ? (parseFloat(price) + 1.75 + 0.50 + 2.15).toFixed(2) : (parseFloat(price) + 0.50 + 2.15).toFixed(2),
 
             }),
         });
@@ -152,8 +152,8 @@ const CheckoutScreen = () => {
         const negativeMargin = new Date();
         const positiveMargin = new Date();
         // Add 5 minutes to the current time
-        negativeMargin.setMinutes(negativeMargin.getMinutes() + 25);
-        positiveMargin.setMinutes(positiveMargin.getMinutes() + 45);
+        negativeMargin.setMinutes(negativeMargin.getMinutes() + 17);
+        positiveMargin.setMinutes(positiveMargin.getMinutes() + 23);
 
         const negativeHours = negativeMargin.getHours();
         const negativeMinutes = negativeMargin.getMinutes();
@@ -247,7 +247,7 @@ const CheckoutScreen = () => {
 
                 ) : (
 
-                    <View className="mt-4">
+                    <View className="-mt-8">
                         <Text className="font-bold text-gray-400 text-medium left-5 ">DELIVER TO</Text>
                         <View>
 
@@ -322,7 +322,7 @@ const CheckoutScreen = () => {
                         <View className="flex-row px-4 content-center">
 
                             <Text className="font-[UberMedium] text-base flex-1">Delivery</Text>
-                            <Text className="font-[UberMedium] text-base">$0.35</Text>
+                            <Text className="font-[UberMedium] text-base">$2.15</Text>
                         </View>
 
                         <View className="  flex-row px-4 content-center">
@@ -341,20 +341,20 @@ const CheckoutScreen = () => {
                         <View className=" flex-row px-4 content-center border-t-2 border-gray-100 pt-3">
 
                             <Text className="font-[UberBold] text-base flex-1">Total</Text>
-                            <Text className="font-[UberBold] text-base">${withFoodSide ? (parseFloat(price) + 1.75 + 0.35 + 0.50).toFixed(2) : (parseFloat(price) + 0.50 + 0.35).toFixed(2)}</Text>
+                            <Text className="font-[UberBold] text-base">${withFoodSide ? (parseFloat(price) + 1.75 + 2.15 + 0.50).toFixed(2) : (parseFloat(price) + 0.50 + 2.15).toFixed(2)}</Text>
                         </View>
 
 
 
                     </View>
 
-                    {!isSmallScreen && (
-                        <View className="px-9 pt-3">
-                            <Text className="text-xs text-gray-800 font-[UberBold]">
-                                Swipes are valued on average between $14 and $18. Using Apple Pay saves swipes for future app versions, with added tax exemptions – while protecting your privacy.
-                            </Text>
-                        </View>
-                    )}
+
+                    <View className="px-9 pt-3">
+                        <Text className="text-xs text-gray-800 font-[UberBold]">
+                            Swipes are valued on average between $14 and $18. Using Apple Pay saves swipes for future app versions, with added tax exemptions – while protecting your privacy.
+                        </Text>
+                    </View>
+
 
                 </View>
 

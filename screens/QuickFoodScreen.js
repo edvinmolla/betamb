@@ -226,7 +226,7 @@ const QuickFoodScreen = () => {
 
 
             </ScrollView>
-            <View className="px-4 absolute bottom-10 w-full ">
+            <View className="px-6 absolute bottom-6 w-full ">
 
                 <TouchableOpacity onPress={() => {
                     const selectedDrink = drink_checkboxes.find((checkbox) => checkbox.checked);
@@ -256,9 +256,9 @@ const QuickFoodScreen = () => {
 
                     navigation.navigate("CheckoutScreen", params) 
 
-                }} activeOpacity={1} className="w-full bg-[#e40464] items-center py-3 rounded-xl">
+                }} activeOpacity={1} className="w-full bg-black items-center py-3 rounded-lg">
 
-                    <Text className=" text-white font-[UberBold] text-lg">Order Now</Text>
+                    <Text className=" text-white font-[UberBold] text-xl">Order Now</Text>
                 </TouchableOpacity>
 
             </View>
